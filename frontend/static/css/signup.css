@@ -1,0 +1,129 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+    }
+    
+    .main-container {
+        max-width: 900px; /* Ajusta el ancho del contenedor principal según tus necesidades */
+        margin-left: 10vw;
+        margin-top: 5vh; /* Centra el contenedor principal verticalmente */
+        padding: 20px;
+        display: flex; /* Establece el contenedor principal como un contenedor flexible */
+        align-items: center; /* Centra los elementos verticalmente */
+        justify-content: center; /* Centra los elementos horizontalmente */
+    }
+    
+    
+
+    .logo-container {
+        max-width: 40%;
+        margin-right: 20px; /* Espacio entre el logo y el formulario */
+    }
+    
+    .img-logo {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .form-container {
+        display:block;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .signup-form {
+        margin-left: 12%;
+        padding: 20px;
+        max-width: 280px;
+    }
+    
+    .box-title {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .box-subtitle {
+        margin-left: 13%;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .textbox-label {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+    }
+    
+    .textbox, .select-birth {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 2px solid #000;
+    }
+    
+    .btn-primary {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        margin-left: 28%;
+    }
+    
+    .btn-primary:hover {
+        background-color: #0056b3;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .btn-primary:active {
+        background-color: #004085;
+    }
+    
+    .btn-primary span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .link-text-bottom {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .link-text-bottom p {
+        margin-bottom: 10px;
+    }
+    
+    @media screen and (max-width: 600px) and (min-width: 320px){
+        .main-container {
+            flex-direction: column; /* Cambia la dirección del contenedor principal a columna para dispositivos móviles */
+            align-items: stretch; /* Ajusta los elementos alineados verticalmente en dispositivos móviles */
+        }
+        
+        .logo-container {
+            margin-right: 0; /* Elimina el margen derecho del logo en dispositivos móviles */
+            margin-bottom: 20px; /* Agrega margen inferior al logo en dispositivos móviles */
+        }
+        
+        .signup-form {
+            margin-top: 20px; /* Agrega margen superior al formulario en dispositivos móviles */
+        }
+        
+        .textbox, .select-birth {
+            width: calc(100% - 20px); /* Ajusta el ancho de los campos de entrada en dispositivos móviles */
+        }
+    }

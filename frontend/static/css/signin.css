@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho y alto total del elemento */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f2f2f2;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-form {
+    width: 80%; /* Ancho del formulario */
+    max-width: 300px; /* Ancho máximo del formulario */
+    text-align: center;
+}
+
+.avatar {
+    width: 50%; /* Ancho del avatar */
+    max-width: 200px; /* Ancho máximo del avatar */
+}
+
+.image-text-bottom {
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: larger;
+}
+
+.textbox-label {
+    text-align: left;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.textbox {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: large;
+    border: 2px solid #000;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.link-text-bottom {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 900;
+    font-size:small;
+}
+
+.btn-primary {
+    text-decoration: none;
+    background-color: #3BAEE7;
+    color: #ffffff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 900;
+    font-size: larger;
+}
+
+.btn-primary:hover {
+    background-color: #2E8BC0;
+}
+
+/* Media query para dispositivos con una anchura máxima de 600px */
+@media screen and (max-width: 600px) and (max-height: 600px){
+    .login-form, .avatar {
+        width: 80%; /* Reducir el ancho del formulario y el avatar */
+        max-width: none; /* Quitar el ancho máximo */
+    }
+    .avatar {
+        margin-bottom: 20px; /* Ajustar el margen inferior */
+        max-width: 150px; /* Reducir el ancho máximo del avatar */
+        margin-top: 80vh;
+    }
+    .link-text-bottom {
+        padding-bottom: 20px;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='img/logo-white-background.ico')}}" type="image/x-icon">
+    <title>Thynk Unlimited</title>
+</head>
+<body>
+    <button class="menu-toggle">
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </button>
+    <div class="header">
+        <ul class="navbar">
+            <li class="navbar-item"><a href="/login">Home</a></li>
+            <li class="navbar-item"><a href="/login">Learn</a></li>
+            <li class="navbar-item"><a href="/login">Great offers</a></li>
+            <li class="navbar-item"><a href="/login">About us</a></li>
+        </ul>
+    </div>
+    <div class="container-body">
+        <div class="card-box">
+            <div class="tittle-text-home">
+                Upgrade Your Skill Now
+            </div>
+            <div class="text-home">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, quidem. Facilis, repudiandae vitae! Dolorum quos in, at rem fugiat ratione! Quos ea voluptas similique quia esse facilis. Eos, ullam repudiandae?
+            </div>
+            <div class="buttons-home">
+                <a class="btn-primary" href="/signup">Sign up</a>
+                <a class="btn-primary" href="/login">Sign in</a>
+            </div>
+        </div>
+        <div class="image-logo">
+            <img src="{{url_for('static', filename='img/logo.png')}}" alt="">
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.navbar').classList.toggle('show');
+        });
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+</body>
+</html>

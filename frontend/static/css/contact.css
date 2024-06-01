@@ -1,0 +1,76 @@
+.contact-us {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contact-us h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px; /* Limita el ancho máximo del formulario */
+    margin-bottom: 20px; /* Espacio entre el formulario y la ubicación */
+    text-align: center; /* Centra el texto del formulario */
+    padding: 10px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form input[type="email"] {
+    height: 40px;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.contact-location {
+    margin-bottom: 20px;
+}
+
+.contact-location h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-location img {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.social-media-icons {
+    display: flex;
+    padding-left: 35%;
+}
+
+.social-media-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.social-media-icons img:hover {
+    transform: scale(1.1);
+}
