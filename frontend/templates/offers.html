@@ -1,4 +1,9 @@
 {% extends "dashboard.html" %}
 {% block content %}
-    offers
+<section class="offers" id="offers">
+    <h2>Ofertas</h2>
+    <div class="course-grid" id="offers-list">
+    </div>
+</section>
+<script src="{{ url_for('static', filename='js/offers.js') }}"></script>
 {%endblock %}

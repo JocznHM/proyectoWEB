@@ -30,6 +30,14 @@
         <div class="form-container">
             <p class="box-title">Create new Account</p>
             <label class="box-subtitle">Enter your personal information please</label>
+            <p>La contraseña debe tener mínimo 8 caracteres, de los cuales debe haber al menos:
+                <ul>
+                    <li>Una letra mayúscula</li>
+                    <li>Una letra minúscula</li>
+                    <li>Un número</li>
+                    <li>Uno de los siguientes caracteres especiales: @, $, !, %, *, ?, #, &.</li>
+                </ul>
+            </p>
             <form class="signup-form">
                 <label class="textbox-label" for="username">NAME</label>
                 <input class="textbox" type="text" name="fullname" id="fullname" placeholder="fullname" required>
@@ -37,6 +45,7 @@
                 <input class="textbox" type="text" name="username" id="username" placeholder="hello@reallygreatsite.com" required>
                 <label class="textbox-label" for="password">PASSWORD</label>
                 <input class="textbox" type="password" name="password" id="password" placeholder="*******" required>
+                <p id="validateText" style="color:red;"></p>
                 <label class="textbox-label" for="date">DATE OF BIRTH</label>
                 <input class="select-birth" type="date" name="date" id="date" required>
                 <a class="btn-primary" type="submit" id="sign-up" value="sign up"><span>sign up</span></a>

@@ -49,6 +49,7 @@ $(document).ready(function () {
                     toastr.success('Bienvenido', 'Autenticación exitosa');
                     // Se almacena el token de autenticación en el local storage
                     localStorage.setItem('token', res.token);
+                    localStorage.setItem('currentUser', data.email);
                     // Se llama al servidor front para guardar el usuario y el valor de session
                     var dataSession = {
                         email: data.email, 

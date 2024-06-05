@@ -1,4 +1,51 @@
 {% extends "dashboard.html" %}
 {% block content %}
-    cart
+<section class="carrito" id="carrito">
+    <h2>Carrito</h2>
+    <div class="course-grid" id="carrito-list">
+    </div>
+</section>
+<section class="payment">
+    <div class="payment-container">
+        <div class="payment-info">
+            <h3>Resumen de compra</h3>
+            <div class="payment-info-container">
+                <div class="payment-info-item">
+                    <p>Subtotal</p>
+                    <p id="subtotal">0</p>
+                </div>
+                <div class="payment-info-item">
+                    <p>Descuento</p>
+                    <p id="descuento">0</p>
+                </div>
+                <div class="payment-info-item">
+                    <p>Total</p>
+                    <p id="total">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="payment-method">
+            <h3>Metodo de pago</h3>
+            <div class="payment-method-container">
+                <div class="payment-method-item">
+                    <input type="radio" name="payment" id="credit-card" value="credit-card">
+                    <label for="credit-card">Tarjeta de credito</label>
+                </div>
+                <div class="payment-method-item">
+                    <input type="radio" name="payment" id="paypal" value="paypal">
+                    <label for="paypal">Paypal</label>
+                </div>
+                <div class="payment-method-item">
+                    <input type="radio" name="payment" id="cash" value="cash">
+                    <label for="cash">Efectivo</label>
+                </div>
+            </div>
+        </div>
+        <div class="payment-button">
+            <button id="pay">Pagar</button>
+        </div>
+    </div>
+</section>
+
+    <script src="{{ url_for('static', filename='js/carrito.js') }}"></script>
 {%endblock %}

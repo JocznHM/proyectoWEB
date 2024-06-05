@@ -9,6 +9,7 @@
             <input type="email" id="email" placeholder="hello@reallygreatsite.com">
             <label for="message">Message</label>
             <textarea id="message" placeholder="Your message"></textarea>
+            <button class="btn btn-primary" id="send">Send</button>
         </div>
         <div class="social-media-icons">
             <img src="{{ url_for('static', filename='img/linkedin.png') }}" alt="WhatsApp">
@@ -22,4 +23,5 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7390.737356170528!2d-100.938275!3d22.150034000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842aa22a4dab0a7b%3A0x1ecd42feb6e0a935!2sInstituto%20Tecnol%C3%B3gico%20de%20San%20Luis%20Potos%C3%AD!5e0!3m2!1ses!2smx!4v1717072296442!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
+<srcipt src="{{ url_for('static', filename='js/contact.js') }}"></srcipt>
 {% endblock %}

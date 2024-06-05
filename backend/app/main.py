@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from controllers.usuario_controller import usuario as usuario_router
-
+from controllers.courses_controller import curso as curso_router
 
 app = FastAPI(
     title="InventarioAPI",
@@ -24,3 +24,4 @@ app.add_middleware(
 )
 
 app.include_router(usuario_router, prefix="/usuarios")
+app.include_router(curso_router, prefix="/cursos")

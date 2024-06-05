@@ -1,50 +1,13 @@
 {% extends 'dashboard.html' %}
 {% block content %}
-    <section class="continue-learning">
-        <h2>Continue learning</h2>
-        <div class="course-card large">
-            <img src="{{ url_for('static', filename='img/pythonCourse.png') }}" alt="Python Essentials">
-            <div class="course-info">
-                <button class="options-button">⋮</button>
-                <h3>Python Essentials</h3>
-                <p>Taught by Joczan Hernandez</p>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 69%;"></div>
-                </div>
-                <p class="time-left">3 hours 11 minutes left</p>
-            </div>
-        </div>
+    <section class="continue-learning" id="continue-learning">
+        <h2>My courses</h2>
+        
     </section>
     <section class="my-courses">
-        <h2>My Courses</h2>
-        <div class="course-grid">
-            <div class="course-card">
-                <img src="{{ url_for('static', filename='img/fastapi.png') }}" alt="FastAPI">
-                <div class="course-info">
-                    <button class="options-button">⋮</button>
-                    <h3>Rest API with FastAPI</h3>
-                    <p>By Valeria Pantoja</p>
-                    <p class="course-duration">5hr 12min</p>
-                </div>
-            </div>
-            <div class="course-card">
-                <img src="{{ url_for('static', filename='img/website react.png') }}" alt="React">
-                <div class="course-info">
-                    <button class="options-button">⋮</button>
-                    <h3>Make your first website with React</h3>
-                    <p>By Karina Saavedra</p>
-                    <p class="course-duration">3hr 25min</p>
-                </div>
-            </div>
-            <div class="course-card">
-                <img src="{{ url_for('static', filename='img/initialhtmlcss.png') }}" alt="HTML and CSS">
-                <div class="course-info">
-                    <button class="options-button">⋮</button>
-                    <h3>Introduction to HTML and CSS</h3>
-                    <p>By John Romero</p>
-                    <p class="course-duration">2hr 56min</p>
-                </div>
-            </div>
+        <div class="course-grid" id="myCourses-list">
+            
         </div>
     </section>
+    <script src="{{ url_for('static', filename='js/myCourses.js') }}"></script>
 {% endblock %}

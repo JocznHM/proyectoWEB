@@ -1,4 +1,11 @@
 {% extends "dashboard.html" %}
 {% block content %}
-    setings
+<section class="profile" id="profile">
+    <h2>Perfil</h2>
+    <div id="profile-info">
+    </div>
+</section>
+
+
+<script src="{{ url_for('static', filename='js/profile.js') }}"></script>
 {%endblock %}

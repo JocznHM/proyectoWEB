@@ -75,6 +75,13 @@ def offers():
     current_user = session['email']
     return render_template('offers.html', current_user=current_user)
 
+@app.route('/curso')
+def course():
+    if not validateSession():
+        return redirect(url_for('login'))
+    current_user = session['email']
+    return render_template('course.html', current_user=current_user)
+
 @app.route('/settings')
 def settings():
     if not validateSession():
@@ -89,9 +96,71 @@ def contact():
     current_user = session['email']
     return render_template('contact.html', current_user=current_user)
 
+@app.route('/carrito')
+def cart():
+    if not validateSession():
+        return redirect(url_for('login'))
+    current_user = session['email']
+    return render_template('carrito.html', current_user=current_user)
+
 @app.route("/get_token", methods=["GET"])
 def get_token():
     return session['token']
+
+@app.route('/agregar_carrito', methods=['POST'])
+def add_to_cart():
+    # Obtener el curso a agregar desde el cuerpo de la solicitud
+    data = request.get_json()
+    course_id = data['course_id']
+    
+    if not course_id:
+        return jsonify({"error": "No course_id provided"}), 400
+
+    # Inicializar la lista 'cart' en la sesión si no existe
+    if 'cart' not in session:
+        session['cart'] = []
+
+    # Agregar el curso a la lista 'cart'
+    session['cart'].append(course_id)
+    
+    # Guardar la sesión
+    session.modified = True
+
+    return jsonify({"msg": "Curso agregado al carrito", "cart": session['cart']}), 200
+
+
+@app.route('/eliminar_carrito', methods=['POST'])
+def remove_from_cart():
+    # Obtener el curso a eliminar desde el cuerpo de la solicitud
+    data = request.get_json()
+    course_id = data['course_id']
+    
+    if not course_id:
+        return jsonify({"error": "No course_id provided"}), 400
+
+    # Inicializar la lista 'cart' en la sesión si no existe
+    if 'cart' not in session:
+        session['cart'] = []
+
+    # Eliminar el curso de la lista 'cart'
+    session['cart'].remove(course_id)
+    
+    # Guardar la sesión
+    session.modified = True
+
+    return jsonify({"msg": "Curso eliminado del carrito", "cart": session['cart']}), 200
+
+@app.route('/get_carrito', methods=['GET'])
+def get_cart():
+    # Obtener la lista 'cart' de la sesión
+    cart = session.get('cart', [])
+    return jsonify({"cart": cart}), 200
+
+@app.route('/limpiar_carrito', methods=['GET'])
+def clear_cart():
+    # Eliminar la lista 'cart' de la sesión
+    session.pop('cart', None)
+    return jsonify({"msg": "Carrito limpiado"}), 200
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

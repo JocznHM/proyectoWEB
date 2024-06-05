@@ -57,10 +57,7 @@
                         {{current_user}}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/perfil">Perfil</a></li>
-                        {%if current_user != "user"%}
-                        <li><a class="dropdown-item" href="/settings">Configuración</a></li>
-                        {% endif %}
+                        <li><a class="dropdown-item" href="/settings">Perfil</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
                     </ul>
